@@ -1,4 +1,7 @@
 # react-datatable-bs
+## Demo
+
+https://sonsoleslp.github.io/react-datatable-bs/example/
 
 ## Getting started
 
