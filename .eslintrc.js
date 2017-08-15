@@ -5,9 +5,7 @@ const ERROR = 2;
 module.exports = {
   parser: 'babel-eslint',
 
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
 
   parserOptions: {
     ecmaVersion: 6,
@@ -29,13 +27,13 @@ module.exports = {
   },
 
   rules: {
-    'strict': OFF,
-    'quotes': [ERROR, 'single'],
-    'max-len': [ERROR, 80],
-    'curly': [ERROR, 'multi-line'],
-    'eqeqeq': [ERROR, 'smart'],
+    strict: OFF,
+    // 'quotes': [ERROR, 'single'],
+    'max-len': [ERROR, 120],
+    curly: [ERROR, 'multi-line'],
+    eqeqeq: [ERROR, 'smart'],
     'block-scoped-var': ERROR,
-    'semi': [WARNING, 'always'],
+    semi: [WARNING, 'always'],
     'space-before-blocks': [WARNING, 'always'],
     'space-in-parens': [OFF, 'never'],
     'comma-dangle': [ERROR, 'only-multiline'],

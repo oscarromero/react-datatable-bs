@@ -1,14 +1,18 @@
 {
-  "name": "react-data-components",
-  "version": "1.1.1",
-  "description": "React data components",
+  "name": "react-datatable-bs",
+  "version": "1.0.0",
+  "description": "React sortable and filterable data table",
   "keywords": [
     "pagination",
     "react",
     "react-component",
-    "table"
+    "table",
+    "datatable",
+    "column",
+    "sort",
+    "data"
   ],
-  "author": "Carlos Rocha",
+  "author": "Sonsoles López Pernas",
   "license": "MIT",
   "main": "./lib/index",
   "files": [
@@ -19,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/carlosrocha/react-data-components"
+    "url": "https://github.com/sonsoleslp/react-datatable-bs"
   },
   "dependencies": {
     "lodash": "^4.13.1",
@@ -60,7 +64,7 @@
     "build": "webpack && babel src -d lib",
     "check": "flow check",
     "clean": "rimraf lib dist coverage",
-    "lint": "eslint src",
+    "lint": "eslint --fix ",
     "precommit": "lint-staged",
     "prepublish": "npm run clean && npm run build",
     "start": "webpack-dev-server -d --config example/webpack.config.js",

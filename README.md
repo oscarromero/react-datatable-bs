@@ -1,21 +1,16 @@
-# react-data-components
-
-[![Build Status](https://travis-ci.org/carlosrocha/react-data-components.svg?branch=master)](https://travis-ci.org/carlosrocha/react-data-components)
-
-DataTable: [Live demo and source](https://jsfiddle.net/carlosrocha/xgde4uh0/)
-
-SelectableTable: [Live demo and source](https://jsfiddle.net/carlosrocha/p9pouh1v/)
+# react-datatable-bs
 
 ## Getting started
 
 ```sh
-npm install react-data-components --save
+npm install react-datatable-bs --save
 ```
+This component is based on https://github.com/carlosrocha/react-data-components, but with some extra props that allow for further customization.
 
 This component requires Bootstrap stylesheet and Font Awesome fonts, in addition
 to the [stylesheet for headers](css/table-twbs.css). If you are using Webpack
 and the `css-loader` you can also require the css
-with `require('react-data-components/css/table-twbs.css')`.
+with `require('react-datatable-bs/css/table-twbs.css')`.
 
 ### Using the default implementation
 
@@ -51,5 +46,18 @@ ReactDOM.render((
   ), document.getElementById('root'));
 ```
 
-See [complete example](example/table/main.js).
+
+### Additional configuration
+
+If any of the component features are not wanted you can disable them by adding any of the following ( which by default are false):
+
+* ``` disableFilter ``` Remove search box
+* ``` disableRowChoice ``` Removes dropdown for page size
+* ``` disablePagination ``` Removes page navigation
+
+Also, you can customize the labels (useful for internacionalization)
+
+* ``` pageSizeLabel ``` By default "Page size:"
+* ``` searchLabel ``` By default "Filter:"
+* ``` searchPlaceholder ``` By default empty
 
