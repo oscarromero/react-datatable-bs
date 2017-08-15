@@ -4,7 +4,7 @@
 
 import type { Action, SortBy, Value, Filters } from './types';
 
-export const DOMAIN = 'react-data-components';
+export const DOMAIN = 'react-datatable-bs';
 export const ActionTypes = {
   DATA_LOADED: `@@${DOMAIN}/DATA_LOADED`,
   INITIALIZE: `@@${DOMAIN}/INITIALIZE`,

@@ -8,8 +8,8 @@ module.exports = {
   entry: './src/index',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'react-data-components.min.js',
-    library: 'ReactDataComponents',
+    filename: 'react-datatable-bs.min.js',
+    library: 'ReactDatatableBs',
     libraryTarget: 'umd',
   },
   externals: {

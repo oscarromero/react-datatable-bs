@@ -40,7 +40,7 @@ export default class PartialTable extends Component {
         <div className="row">
           {disableRowChoice
             ? null
-            : <div className="col-lg-1 col-xs-2">
+            : <div className="col-lg-2 col-xs-2">
                 <div>
                   <label htmlFor="page-menu">
                     {this.props.pageSizeLabel || 'Page size:'}
@@ -61,7 +61,7 @@ export default class PartialTable extends Component {
                   </select>
                 </div>
               </div>}
-          <div className="col-lg-5 col-xs-4">
+          <div className="col-lg-4 col-xs-4">
             {disableFilter
               ? null
               : <div>
@@ -80,7 +80,7 @@ export default class PartialTable extends Component {
                   <br />
                 </div>}
           </div>
-          {disableRowChoice ? <div className="col-lg-1 col-xs-2" /> : null}
+          {disableRowChoice ? <div className="col-lg-2 col-xs-2" /> : null}
 
           {disablePagination
             ? null

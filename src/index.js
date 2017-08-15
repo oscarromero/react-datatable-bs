@@ -2,6 +2,7 @@ export DataTable from './DataTable';
 export PartialTable from './PartialTable';
 export ReduxTable from './ReduxTable';
 export Table from './Table';
+export Config from './config';
 export Pagination from './Pagination';
 export dataReducer from './dataReducer';
 export * as utils from './utils';

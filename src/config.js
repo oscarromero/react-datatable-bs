@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataTable } from 'react-data-components';
+import DataTable from './DataTable';
 
 export default class Config extends React.Component {
   constructor(props) {

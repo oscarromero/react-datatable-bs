@@ -13,6 +13,7 @@
     "data"
   ],
   "author": "Sonsoles López Pernas",
+  "homepage": "https://sonsoleslp.github.io/reat-datatable-bs/example/example.html",
   "license": "MIT",
   "main": "./lib/index",
   "files": [
