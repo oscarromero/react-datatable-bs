@@ -207,18 +207,7 @@ export default class Config extends React.Component {
                 import DataTable from './DataTable';
 
                 export default class MyTable extends React.Component {
-                  constructor(props) {
-                  super(props);
-                  this.state = {
-                     initialPageLength: 5,
-                     disableRowChoice: false,
-                     disableFilter: false,
-                     disablePagination: false,
-                     pageSizeLabel: 'Page size',
-                     searchLabel: 'Filter: ',
-                     searchPlaceholder: 'Type here',
-                  };
-               }
+                  
                render() {
                   return (
                `}
