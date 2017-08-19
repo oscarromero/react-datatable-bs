@@ -192,6 +192,65 @@ export default class Config extends React.Component {
               pageLengthOptions={[5, 10, 20, 50, 100]}
             />
           </div>
+          <div className="col-xs-12" style={{ textAlign: 'center' }}>
+            <pre
+              style={{
+                whiteSpace: 'pre-line',
+                textAlign: 'left',
+                width: 'auto',
+                margin: 'auto',
+              }}
+            >
+              <em>//Sample custom component</em>
+              <br />
+              {`import React from 'react';
+                import DataTable from './DataTable';
+
+                export default class MyTable extends React.Component {
+                  constructor(props) {
+                  super(props);
+                  this.state = {
+                     initialPageLength: 5,
+                     disableRowChoice: false,
+                     disableFilter: false,
+                     disablePagination: false,
+                     pageSizeLabel: 'Page size',
+                     searchLabel: 'Filter: ',
+                     searchPlaceholder: 'Type here',
+                  };
+               }
+               render() {
+                  return (
+               `}
+              {'   <DataTable\n'}
+              {'     className="container"\n'}
+              {'     keys="id"\n'}
+              {'     columns={this.props.columns}\n'}
+              {'     initialData={this.props.initialData}\n'}
+              {'     initialPageLength={' +
+                this.state.initialPageLength +
+                '}\n'}
+              {'     initialSortBy={{ prop: "city", order: "descending" }}\n'}
+              {this.state.disableRowChoice ? '     disableRowChoice\n' : null}
+              {this.state.disableFilter ? '     disableFilter\n' : null}
+              {this.state.disablePagination ? '     disablePagination\n' : null}
+              {!this.state.disableRowChoice
+                ? '     pageSizeLabel={"' + this.state.pageSizeLabel + '"}\n'
+                : null}
+              {!this.state.disableFilter
+                ? '     searchLabel={"' + this.state.searchLabel + '"}\n'
+                : null}
+              {!this.state.disableFilter
+                ? '     searchPlaceholder={"' +
+                  this.state.searchPlaceholder +
+                  '"}\n'
+                : null}
+              {!this.state.disableRowChoice
+                ? '     pageLengthOptions={[5, 10, 20, 50, 100]} />);\n'
+                : null}
+              {'  }\n}'}
+            </pre>
+          </div>
         </div>
         <footer style={{ textAlign: 'center' }}>
           By <a href="https://github.com/sonsoleslp">@sonsoleslp</a> based on{' '}

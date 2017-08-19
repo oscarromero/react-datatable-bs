@@ -29,7 +29,7 @@ module.exports = {
   rules: {
     strict: OFF,
     // 'quotes': [ERROR, 'single'],
-    'max-len': [ERROR, 120],
+    'max-len': [ERROR, 150],
     curly: [ERROR, 'multi-line'],
     eqeqeq: [ERROR, 'smart'],
     'block-scoped-var': ERROR,
