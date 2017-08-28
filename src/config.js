@@ -240,6 +240,7 @@ export default class Config extends React.Component {
                 '}\n'}
               {'     initialSortBy={{ prop: "city", order: "descending" }}\n'}
               {this.state.disableRowChoice ? '     disableRowChoice\n' : null}
+              {'     noDataLabel={"' + this.state.noDataLabel + '"}\n'}
               {this.state.disableFilter ? '     disableFilter\n' : null}
               {this.state.disablePagination ? '     disablePagination\n' : null}
               {!this.state.disableRowChoice

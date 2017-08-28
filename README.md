@@ -63,4 +63,6 @@ Also, you can customize the labels (useful for internacionalization)
 * ``` pageSizeLabel ``` By default "Page size:"
 * ``` searchLabel ``` By default "Filter:"
 * ``` searchPlaceholder ``` By default empty
+* ``` noDataLabel ``` By default empty (It appears when the table is empty)
+
 
