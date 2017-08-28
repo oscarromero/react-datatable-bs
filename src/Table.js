@@ -73,6 +73,7 @@ export default class Table extends Component {
     }),
 
     onSort: PropTypes.func,
+    noDataLabel: PropTypes.string,
   };
 
   componentDidMount() {
@@ -93,6 +94,7 @@ export default class Table extends Component {
       sortBy,
       onSort,
       dataArray,
+      noDataLabel,
       ...otherProps
     } = this.props;
 
@@ -155,7 +157,7 @@ export default class Table extends Component {
             ? rows
             : <tr>
                 <td colSpan={columns.length} className="text-center">
-                  No data
+                  {this.props.noDataLabel}
                 </td>
               </tr>}
         </tbody>

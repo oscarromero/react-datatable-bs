@@ -13,6 +13,7 @@ export default class Config extends React.Component {
       searchLabel: 'Filter: ',
       searchPlaceholder: 'Type here',
       bootstrap: 'classic',
+      noDataLabel: 'No data',
     };
   }
   render() {
@@ -137,42 +138,59 @@ export default class Config extends React.Component {
             <br />
           </div>
           <div className="col-xs-12 col-md-6">
-            <div className="form-group">
-              <label>
-                Search Placeholder <br />
-                <input
-                  type="text"
-                  className="form-control"
-                  value={this.state.searchPlaceholder}
-                  onChange={e => {
-                    this.setState({ searchPlaceholder: e.target.value });
-                  }}
-                />
-              </label>
-              <br />
-              <label>
-                Search Label <br />
-                <input
-                  type="text"
-                  className="form-control"
-                  value={this.state.searchLabel}
-                  onChange={e => {
-                    this.setState({ searchLabel: e.target.value });
-                  }}
-                />
-              </label>
-              <br />
-              <label>
-                Page size Label <br />
-                <input
-                  type="text"
-                  className="form-control"
-                  value={this.state.pageSizeLabel}
-                  onChange={e => {
-                    this.setState({ pageSizeLabel: e.target.value });
-                  }}
-                />
-              </label>
+            <div className="row">
+              <div className="col-xs-12 col-sm-6">
+                <label>
+                  Search Placeholder <br />
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={this.state.searchPlaceholder}
+                    onChange={e => {
+                      this.setState({ searchPlaceholder: e.target.value });
+                    }}
+                  />
+                </label>
+                <br />
+                <label>
+                  Search Label <br />
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={this.state.searchLabel}
+                    onChange={e => {
+                      this.setState({ searchLabel: e.target.value });
+                    }}
+                  />
+                </label>
+                <br />
+              </div>
+              <div className="col-xs-12 col-sm-6">
+                <label>
+                  Page size Label <br />
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={this.state.pageSizeLabel}
+                    onChange={e => {
+                      this.setState({ pageSizeLabel: e.target.value });
+                    }}
+                  />
+                </label>
+                <br />
+                <label>
+                  No Data Label <br />
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={this.state.noDataLabel}
+                    onChange={e => {
+                      this.setState({ noDataLabel: e.target.value });
+                    }}
+                  />
+                </label>
+                <br />
+              </div>
             </div>
           </div>
           <div className="col-xs-12">
@@ -188,6 +206,7 @@ export default class Config extends React.Component {
               pageSizeLabel={this.state.pageSizeLabel}
               searchLabel={this.state.searchLabel}
               searchPlaceholder={this.state.searchPlaceholder}
+              noDataLabel={this.state.noDataLabel}
               initialSortBy={{ prop: 'city', order: 'descending' }}
               pageLengthOptions={[5, 10, 20, 50, 100]}
             />

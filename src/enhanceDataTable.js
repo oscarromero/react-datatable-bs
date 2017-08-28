@@ -18,6 +18,7 @@ type Props = {
   keys: Array<string>,
   buildRowOptions: any,
   filters: any,
+  noDataLabel: string,
 };
 
 const mapPropsToState = props => ({

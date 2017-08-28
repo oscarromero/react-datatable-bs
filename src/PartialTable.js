@@ -19,6 +19,7 @@ export default class PartialTable extends Component {
       pageSizeLabel,
       searchLabel,
       searchPlaceholder,
+      noDataLabel,
     } = this.props;
 
     // Protect against unloaded data.
@@ -98,6 +99,7 @@ export default class PartialTable extends Component {
           dataArray={page}
           columns={columns}
           keys={keys}
+          noDataLabel={noDataLabel}
           buildRowOptions={buildRowOptions}
           sortBy={sortBy}
           onSort={onSort}
