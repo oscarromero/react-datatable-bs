@@ -20,6 +20,7 @@ export default class PartialTable extends Component {
       searchLabel,
       searchPlaceholder,
       noDataLabel,
+      paginationBottom,
     } = this.props;
 
     // Protect against unloaded data.
@@ -36,12 +37,27 @@ export default class PartialTable extends Component {
       filterValues,
     } = this.props.data;
 
+    let pag = disablePagination
+      ? null
+      : <div className={paginationBottom ? 'col-xs-12' : 'col-xs-6'}>
+          <Pagination
+            className="pagination pull-right"
+            currentPage={pageNumber}
+            totalPages={totalPages}
+            onChangePage={onPageNumberChange}
+          />
+        </div>;
+
     return (
       <div className="container">
         <div className="row">
           {disableRowChoice
             ? null
-            : <div className="col-lg-2 col-xs-2">
+            : <div
+                className={
+                  paginationBottom ? 'col-lg-3 col-xs-3' : 'col-lg-2 col-xs-2'
+                }
+              >
                 <div>
                   <label htmlFor="page-menu">
                     {this.props.pageSizeLabel || 'Page size:'}
@@ -62,7 +78,13 @@ export default class PartialTable extends Component {
                   </select>
                 </div>
               </div>}
-          <div className="col-lg-4 col-xs-4">
+          <div
+            className={
+              paginationBottom
+                ? 'col-lg-7 col-lg-push-2 col-xs-9'
+                : 'col-lg-4 col-xs-4'
+            }
+          >
             {disableFilter
               ? null
               : <div>
@@ -83,16 +105,7 @@ export default class PartialTable extends Component {
           </div>
           {disableRowChoice ? <div className="col-lg-2 col-xs-2" /> : null}
 
-          {disablePagination
-            ? null
-            : <div className="col-xs-6">
-                <Pagination
-                  className="pagination pull-right"
-                  currentPage={pageNumber}
-                  totalPages={totalPages}
-                  onChangePage={onPageNumberChange}
-                />
-              </div>}
+          {paginationBottom ? null : pag}
         </div>
         <Table
           className="table table-bordered"
@@ -104,6 +117,7 @@ export default class PartialTable extends Component {
           sortBy={sortBy}
           onSort={onSort}
         />
+        {paginationBottom ? pag : null}
       </div>
     );
   }

@@ -14,6 +14,7 @@ export default class Config extends React.Component {
       searchPlaceholder: 'Type here',
       bootstrap: 'classic',
       noDataLabel: 'No data',
+      paginationBottom: false,
     };
   }
   render() {
@@ -62,6 +63,20 @@ export default class Config extends React.Component {
                   }}
                 />
                 Disable row number choice
+              </label>
+              <br />
+              <br />
+              <label className="checkbox-inline">
+                <input
+                  type="checkbox"
+                  checked={this.state.paginationBottom}
+                  onChange={e => {
+                    this.setState({
+                      paginationBottom: !this.state.paginationBottom,
+                    });
+                  }}
+                />
+                Pagination at bottom
               </label>
               <br />
               <br />
@@ -209,6 +224,7 @@ export default class Config extends React.Component {
               noDataLabel={this.state.noDataLabel}
               initialSortBy={{ prop: 'city', order: 'descending' }}
               pageLengthOptions={[5, 10, 20, 50, 100]}
+              paginationBottom={this.state.paginationBottom}
             />
           </div>
           <div className="col-xs-12" style={{ textAlign: 'center' }}>
@@ -243,6 +259,7 @@ export default class Config extends React.Component {
               {'     noDataLabel={"' + this.state.noDataLabel + '"}\n'}
               {this.state.disableFilter ? '     disableFilter\n' : null}
               {this.state.disablePagination ? '     disablePagination\n' : null}
+              {this.state.paginationBottom ? '     paginationBottom\n' : null}
               {!this.state.disableRowChoice
                 ? '     pageSizeLabel={"' + this.state.pageSizeLabel + '"}\n'
                 : null}
