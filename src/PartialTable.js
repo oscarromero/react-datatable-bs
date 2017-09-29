@@ -55,14 +55,15 @@ export default class PartialTable extends Component {
             ? null
             : <div
                 className={
-                  paginationBottom ? 'col-lg-3 col-xs-3' : 'col-lg-2 col-xs-2'
+                  paginationBottom || disablePagination
+                    ? 'col-lg-3 col-xs-3'
+                    : 'col-lg-2 col-xs-2'
                 }
               >
                 <div>
                   <label htmlFor="page-menu">
                     {this.props.pageSizeLabel || 'Page size:'}
                   </label>{' '}
-                  <br />
                   <select
                     className="form-control"
                     style={{ width: 'auto' }}
@@ -76,12 +77,14 @@ export default class PartialTable extends Component {
                       </option>,
                     )}
                   </select>
+                  <br />
                 </div>
               </div>}
           <div
             className={
-              paginationBottom
-                ? 'col-lg-7 col-lg-push-2 col-xs-9'
+              paginationBottom || disablePagination
+                ? 'col-lg-7 col-xs-9' +
+                  (disableRowChoice ? '' : ' col-lg-push-2')
                 : 'col-lg-4 col-xs-4'
             }
           >
