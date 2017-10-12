@@ -120,7 +120,11 @@ export default class Table extends Component {
           </span>
           {!order
             ? null
-            : <span className={`sort-icon sort-${order}`} aria-hidden="true" />}
+            : <span className="" aria-hidden="true">
+                {order && order == 'ascending'
+                  ? <span>&#11205;</span>
+                  : order && order == 'descending' ? <span>&#11206;</span> : ''}
+              </span>}
         </th>
       );
     });

@@ -97,7 +97,9 @@ export default class Pagination extends Component {
           aria-disabled={!isNotFirst}
           aria-label="First"
         >
-          <span className="fa fa-angle-double-left" aria-hidden="true" />
+          <span className="" aria-hidden="true">
+            &#11120;
+          </span>
         </a>
       </li>,
       <li key="prev" className={!isNotFirst ? 'disabled' : null}>
@@ -109,7 +111,9 @@ export default class Pagination extends Component {
           aria-disabled={!isNotFirst}
           aria-label="Previous"
         >
-          <span className="fa fa-angle-left" aria-hidden="true" />
+          <span className="" aria-hidden="true">
+            &#11104;
+          </span>
         </a>
       </li>,
     ].concat(buttons);
@@ -124,7 +128,9 @@ export default class Pagination extends Component {
           aria-disabled={!isNotLast}
           aria-label="Next"
         >
-          <span className="fa fa-angle-right" aria-hidden="true" />
+          <span className="" aria-hidden="true">
+            &#11106;
+          </span>
         </a>
       </li>,
       <li key="last" className={!isNotLast ? 'disabled' : null}>
@@ -136,7 +142,9 @@ export default class Pagination extends Component {
           aria-disabled={!isNotLast}
           aria-label="Last"
         >
-          <span className="fa fa-angle-double-right" aria-hidden="true" />
+          <span className="" aria-hidden="true">
+            &#11122;
+          </span>
         </a>
       </li>,
     ]);
