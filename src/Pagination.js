@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ff from 'url-loader!./../svg/fast-forward.svg';
-import f from 'url-loader!./../svg/forward.svg';
-import b from 'url-loader!./../svg/backward.svg';
-import fb from 'url-loader!./../svg/fast-backward.svg';
 // Used to cancel events.
 var preventDefault = e => e.preventDefault();
 
@@ -101,7 +97,7 @@ export default class Pagination extends Component {
           aria-label="First"
         >
           <span className="" aria-hidden="true">
-            <img src={fb} style={{ width: '10px', color: 'grey' }} />
+            {svg_fb}
           </span>
         </a>
       </li>,
@@ -115,7 +111,7 @@ export default class Pagination extends Component {
           aria-label="Previous"
         >
           <span className="" aria-hidden="true">
-            <img src={b} style={{ width: '10px', color: 'grey' }} />
+            {svg_b}
           </span>
         </a>
       </li>,
@@ -132,7 +128,7 @@ export default class Pagination extends Component {
           aria-label="Next"
         >
           <span className="" aria-hidden="true">
-            <img src={f} style={{ width: '10px', color: 'grey' }} />
+            {svg_f}
           </span>
         </a>
       </li>,
@@ -146,7 +142,7 @@ export default class Pagination extends Component {
           aria-label="Last"
         >
           <span className="" aria-hidden="true">
-            <img src={ff} style={{ width: '10px', color: 'grey' }} />
+            {svg_ff}
           </span>
         </a>
       </li>,
@@ -159,3 +155,48 @@ export default class Pagination extends Component {
     );
   }
 }
+
+let svg_fb = (
+  <svg
+    width="10"
+    height="10"
+    fill="#337ab7"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M1011 1376q0 13-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23zm384 0q0 13-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23z" />
+  </svg>
+);
+let svg_b = (
+  <svg
+    width="10"
+    height="10"
+    fill="#337ab7"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z" />
+  </svg>
+);
+let svg_f = (
+  <svg
+    width="10"
+    height="10"
+    fill="#337ab7"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z" />
+  </svg>
+);
+let svg_ff = (
+  <svg
+    width="10"
+    height="10"
+    fill="#337ab7"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M979 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23zm384 0q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z" />
+  </svg>
+);

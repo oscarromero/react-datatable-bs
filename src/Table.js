@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import asc from 'url-loader!./../svg/caret-up.svg';
-import desc from 'url-loader!./../svg/caret-down.svg';
+
 const simpleGet = key => data => data[key];
 const keyGetter = keys => data => keys.map(key => data[key]);
 
@@ -123,15 +122,8 @@ export default class Table extends Component {
             ? null
             : <span className="" aria-hidden="true">
                 {order && order == 'ascending'
-                  ? <span>
-                      <img src={asc} style={{ width: '12px', color: 'grey' }} />
-                    </span>
-                  : order && order == 'descending'
-                    ? <img
-                        src={desc}
-                        style={{ width: '12px', color: 'grey' }}
-                      />
-                    : ''}
+                  ? asc
+                  : order && order == 'descending' ? desc : ''}
               </span>}
         </th>
       );
@@ -177,3 +169,23 @@ export default class Table extends Component {
     );
   }
 }
+let asc = (
+  <svg
+    width="10"
+    height="10"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M1408 1216q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z" />
+  </svg>
+);
+let desc = (
+  <svg
+    width="10"
+    height="10"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M1408 704q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z" />
+  </svg>
+);
