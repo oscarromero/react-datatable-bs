@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ff from 'url-loader!./fast-forward.svg';
-import f from 'url-loader!./forward.svg';
-import b from 'url-loader!./backward.svg';
-import fb from 'url-loader!./fast-backward.svg';
+import ff from 'url-loader!./../svg/fast-forward.svg';
+import f from 'url-loader!./../svg/forward.svg';
+import b from 'url-loader!./../svg/backward.svg';
+import fb from 'url-loader!./../svg/fast-backward.svg';
 // Used to cancel events.
 var preventDefault = e => e.preventDefault();
 

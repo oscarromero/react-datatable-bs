@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import asc from 'url-loader!./caret-up.svg';
-import desc from 'url-loader!./caret-down.svg';
+import asc from 'url-loader!./../svg/caret-up.svg';
+import desc from 'url-loader!./../svg/caret-down.svg';
 const simpleGet = key => data => data[key];
 const keyGetter = keys => data => keys.map(key => data[key]);
 

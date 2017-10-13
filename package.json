@@ -1,6 +1,6 @@
 {
   "name": "react-datatable-bs",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "React sortable and filterable data table",
   "keywords": [
     "pagination",
@@ -20,7 +20,8 @@
     "css",
     "lib",
     "dist",
-    "src"
+    "src",
+    "svg"
   ],
   "repository": {
     "type": "git",
