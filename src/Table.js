@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import asc from 'url-loader!./caret-up.svg';
+import desc from 'url-loader!./caret-down.svg';
 const simpleGet = key => data => data[key];
 const keyGetter = keys => data => keys.map(key => data[key]);
 
@@ -122,8 +123,15 @@ export default class Table extends Component {
             ? null
             : <span className="" aria-hidden="true">
                 {order && order == 'ascending'
-                  ? <span>&#11205;</span>
-                  : order && order == 'descending' ? <span>&#11206;</span> : ''}
+                  ? <span>
+                      <img src={asc} style={{ width: '12px', color: 'grey' }} />
+                    </span>
+                  : order && order == 'descending'
+                    ? <img
+                        src={desc}
+                        style={{ width: '12px', color: 'grey' }}
+                      />
+                    : ''}
               </span>}
         </th>
       );

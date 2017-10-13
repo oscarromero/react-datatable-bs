@@ -1,6 +1,6 @@
 {
   "name": "react-datatable-bs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React sortable and filterable data table",
   "keywords": [
     "pagination",
@@ -57,7 +57,9 @@
     "react-redux": "^4.4.5",
     "react-test-renderer": "^15.6.1",
     "redux": "^3.5.2",
+    "resolve-url-loader": "^2.1.1",
     "rimraf": "^2.4.3",
+    "url-loader": "^0.6.2",
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.0"
   },

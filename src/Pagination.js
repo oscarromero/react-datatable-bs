@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import ff from 'url-loader!./fast-forward.svg';
+import f from 'url-loader!./forward.svg';
+import b from 'url-loader!./backward.svg';
+import fb from 'url-loader!./fast-backward.svg';
 // Used to cancel events.
 var preventDefault = e => e.preventDefault();
 
@@ -98,7 +101,7 @@ export default class Pagination extends Component {
           aria-label="First"
         >
           <span className="" aria-hidden="true">
-            &#11120;
+            <img src={fb} style={{ width: '10px', color: 'grey' }} />
           </span>
         </a>
       </li>,
@@ -112,7 +115,7 @@ export default class Pagination extends Component {
           aria-label="Previous"
         >
           <span className="" aria-hidden="true">
-            &#11104;
+            <img src={b} style={{ width: '10px', color: 'grey' }} />
           </span>
         </a>
       </li>,
@@ -129,7 +132,7 @@ export default class Pagination extends Component {
           aria-label="Next"
         >
           <span className="" aria-hidden="true">
-            &#11106;
+            <img src={f} style={{ width: '10px', color: 'grey' }} />
           </span>
         </a>
       </li>,
@@ -143,7 +146,7 @@ export default class Pagination extends Component {
           aria-label="Last"
         >
           <span className="" aria-hidden="true">
-            &#11122;
+            <img src={ff} style={{ width: '10px', color: 'grey' }} />
           </span>
         </a>
       </li>,

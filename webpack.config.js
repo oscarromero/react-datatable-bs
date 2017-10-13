@@ -30,6 +30,18 @@ module.exports = {
           plugins: ['lodash'],
         },
       },
+
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|json|xml|ico)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1000000,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
