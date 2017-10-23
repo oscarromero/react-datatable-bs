@@ -128,11 +128,11 @@ export default class Table extends Component {
     });
 
     const getKeys = Array.isArray(keys) ? keyGetter(keys) : simpleGet(keys);
-    const rows = dataArray.map(row => {
+    const rows = dataArray.map((row, key) => {
       const trProps = buildRowOptions ? buildRowOptions(row) : {};
 
       return (
-        <tr key={getKeys(row)} {...trProps}>
+        <tr key={'row_' + key} {...trProps}>
           {columns.map((col, i) => (
             <td key={'col-' + i} className={getCellClass(col, row)}>
               {getCellValue(col, row)}
