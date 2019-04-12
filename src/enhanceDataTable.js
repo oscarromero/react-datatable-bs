@@ -30,6 +30,7 @@ export default function enhanceDataTable(ComposedComponent) {
   return class DataTableEnhancer extends Component {
     static defaultProps = {
       initialPageLength: 10,
+      tableClass: 'table table-bordered',
       pageLengthOptions: [5, 10, 20],
       filters: {
         globalSearch: { filter: containsIgnoreCase },

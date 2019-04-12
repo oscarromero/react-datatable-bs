@@ -21,6 +21,7 @@ export default class PartialTable extends Component {
       searchPlaceholder,
       noDataLabel,
       paginationBottom,
+      tableClass,
     } = this.props;
 
     // Protect against unloaded data.
@@ -111,7 +112,7 @@ export default class PartialTable extends Component {
           {paginationBottom ? null : pag}
         </div>
         <Table
-          className="table table-bordered"
+          className={tableClass}
           dataArray={page}
           columns={columns}
           keys={keys}
