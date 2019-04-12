@@ -45,6 +45,7 @@ ReactDOM.render((
       initialData={data}
       initialPageLength={5}
       initialSortBy={{ prop: 'city', order: 'descending' }}
+      tableClass={"table table-hover table-condensed"}
     />
   ), document.getElementById('root'));
 ```
@@ -64,5 +65,6 @@ Also, you can customize the labels (useful for internacionalization)
 * ``` searchLabel ``` By default "Filter:"
 * ``` searchPlaceholder ``` By default empty
 * ``` noDataLabel ``` By default empty (It appears when the table is empty)
+* ``` tableClass ``` By default "table table-bordered"
 
 
