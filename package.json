@@ -12,8 +12,7 @@
     "sort",
     "data"
   ],
-  "author": "Sonsoles López Pernas",
-  "homepage": "https://sonsoleslp.github.io/reat-datatable-bs/example/index.html",
+  "author": "Oscar Romero",
   "license": "MIT",
   "main": "./lib/index",
   "files": [
@@ -24,14 +23,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sonsoleslp/react-datatable-bs"
+    "url": "https://github.com/oscarromero/react-datatable-bs"
   },
   "dependencies": {
     "lodash": "^4.13.1",
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^16.0.0-0"
+    "react": ">=0.14.0"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
