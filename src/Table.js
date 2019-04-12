@@ -115,14 +115,16 @@ export default class Table extends Component {
           scope="col"
           {...sortProps}
         >
-          <span>{col.title}</span>
-          {!order ? null : (
-            <span className="" aria-hidden="true">
-              {order && order == 'ascending'
-                ? asc
-                : order && order == 'descending' ? desc : ''}
-            </span>
-          )}
+          <span>
+            {col.title}
+          </span>
+          {!order
+            ? null
+            : <span className="" aria-hidden="true">
+                {order && order === 'ascending'
+                  ? asc
+                  : order && order === 'descending' ? desc : ''}
+              </span>}
         </th>
       );
     });
@@ -133,35 +135,35 @@ export default class Table extends Component {
 
       return (
         <tr key={'row_' + key} {...trProps}>
-          {columns.map((col, i) => (
+          {columns.map((col, i) =>
             <td key={'col-' + i} className={getCellClass(col, row)}>
               {getCellValue(col, row)}
-            </td>
-          ))}
+            </td>,
+          )}
         </tr>
       );
     });
 
     return (
       <table {...otherProps}>
-        {!sortBy ? null : (
-          <caption className="sr-only" role="alert" aria-live="polite">
-            {`Sorted by ${sortBy.prop}: ${sortBy.order} order`}
-          </caption>
-        )}
+        {!sortBy
+          ? null
+          : <caption className="sr-only" role="alert" aria-live="polite">
+              {`Sorted by ${sortBy.prop}: ${sortBy.order} order`}
+            </caption>}
         <thead>
-          <tr key="headers">{headers}</tr>
+          <tr key="headers">
+            {headers}
+          </tr>
         </thead>
         <tbody>
-          {rows.length ? (
-            rows
-          ) : (
-            <tr key="no-data">
-              <td colSpan={columns.length} className="text-center">
-                {this.props.noDataLabel}
-              </td>
-            </tr>
-          )}
+          {rows.length
+            ? rows
+            : <tr key="no-data">
+                <td colSpan={columns.length} className="text-center">
+                  {noDataLabel}
+                </td>
+              </tr>}
         </tbody>
       </table>
     );
