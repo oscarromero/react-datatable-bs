@@ -1,3 +1,12 @@
+## Clarification
+I've clone this repo for light improvements.
+The source repo is maintained by https://github.com/sonsoleslp/react-datatable-bs
+
+# improvements
+* ``` tableClass ``` By default "table table-bordered"
+
+==== Source README ====
+
 # react-datatable-bs
 ## Demo
 
@@ -65,6 +74,5 @@ Also, you can customize the labels (useful for internacionalization)
 * ``` searchLabel ``` By default "Filter:"
 * ``` searchPlaceholder ``` By default empty
 * ``` noDataLabel ``` By default empty (It appears when the table is empty)
-* ``` tableClass ``` By default "table table-bordered"
 
 
